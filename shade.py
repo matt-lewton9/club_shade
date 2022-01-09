@@ -18,7 +18,7 @@ TILT = 3.8 #degrees, tilt of rink from N-S
 def main(): #main function for direct usage
     
     day_delta = datetime.timedelta(days=1) #set t step to 1 day
-    start_date = datetime.date(2021, 10, 30) # hardcode start date
+    start_date = datetime.date(2021, 10, 15) # hardcode start date
     end_date = datetime.date(2022, 3, 15) #hardcode end date
 
     for i in range((end_date - start_date).days): #get day, month, year as datetime objects, then get plot and create a graph

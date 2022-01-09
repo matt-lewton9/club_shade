@@ -5,7 +5,7 @@ Shade.py produces a map of what portion of the rink (y axis) is covered at vario
 
 Heat.py produces a heatmap of minutes of shade provided by the cover, it does not facor in the trees.
 
-The date range 10/31 - 3/15 has been hardcoded in main but can be changed. The range of time 9am to 4pm has also been hardcoded, as that is when the sun's intensity is the most significant. Future work for heat.py could use the actual sunrise and sunset times, then weight minutes of coverage by intensity of solar radiation, all data avaliable in the pysolar library. Shade.py could also theoretically account for sunrise and sunset, but an irregular time range would make plotting such a graph difficult.
+In both shade.y and heat.py, the date range 10/15 - 3/15 has been hardcoded in main but can be changed. The range of time 9am to 4pm has also been hardcoded, as that is when the sun's intensity is the most significant. Future work for heat.py could use the actual sunrise and sunset times, then weight minutes of coverage by intensity of solar radiation, all data avaliable in the pysolar library. Shade.py could also theoretically account for sunrise and sunset, but an irregular time range would make plotting such a graph difficult.
 
 The rink is assumed to be 200 ft long by 80 ft wide tilted 3.8 degrees NW. These estimates, as well as the latitude and longitude of center ice  were determined with Google Earth.
 
