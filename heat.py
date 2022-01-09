@@ -28,7 +28,7 @@ def main():
     #For Hardcoded date range
     # The size of each step in days
     day_delta = datetime.timedelta(days=1) #set t step to one day
-    start_date = datetime.date(2021, 10, 15) #set start date to Oct 30
+    start_date = datetime.date(2021, 10, 15) #set start date to Oct 15
     end_date = datetime.date(2022, 3, 15) #set end date to march 15
     for i in range((end_date - start_date).days): #get day, month, year as datetime objects, then simulate shade and create a graph
         Day = (start_date + i*day_delta).day
@@ -96,7 +96,7 @@ def graphData(shade, Day, Month, Year):
     plt.ylabel('Baseline 0 ft at trees, Winter Center at 200 ft') #y axis label
     plt.xlabel("North Side/Trees") #x axis label
     
-    plt.savefig("10-30_3-15_Heatmaps/" +str(Month)+"-"+str(Day)+"-"+ str(Year) + "_heatmap.png", format = 'png', bbox_inches = 'tight') #save image as png
+    plt.savefig("10-15_3-15_Heatmaps/" +str(Month)+"-"+str(Day)+"-"+ str(Year) + "_heatmap.png", format = 'png', bbox_inches = 'tight') #save image as png
 
     #plt.show() #show image
 

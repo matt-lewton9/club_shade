@@ -89,7 +89,7 @@ def makeGraph(mins, wall, scrl, scrr, Day, Month, Year):
     plt.plot(mins, scrr, color='blue') #plot shade by cover top line
     plt.fill_between(mins, wall, color='green', alpha = .2) #fill green area
     plt.fill_between(mins, scrr, scrl, color='blue', alpha = .2) #fill blue area
-    plt.savefig("10-30_3-15_Shade/" +str(Month)+"-"+str(Day)+"-"+ str(Year) + "_Shade.png", format = 'png', bbox_inches = 'tight') #save image as png
+    plt.savefig("10-15_3-15_Shade/" +str(Month)+"-"+str(Day)+"-"+ str(Year) + "_Shade.png", format = 'png', bbox_inches = 'tight') #save image as png
 
     #plt.show()
 
