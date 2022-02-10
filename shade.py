@@ -6,9 +6,9 @@ import matplotlib.image as mpimg
 import math
 
 #init datasets and constants
-HEIGHT = 30
-BOTTOM = 75
-WIDTH = 50
+HEIGHT = 15
+BOTTOM = 25
+WIDTH = 125
 R_WIDTH = 80 #width of rink (E-W)
 R_LENGTH = 200 #length of rink
 LATITUDE = 38.974173 #Rink latitude
@@ -17,6 +17,13 @@ TILT = 3.8 #degrees, tilt of rink from N-S
 
 def main(): #main function for direct usage
     
+
+    # Single day use
+    Day, Month, Year = getInputs()
+    mins, wall, scrl, scrr = calcShade(Day, Month, Year)
+    makeGraph(mins, wall, scrl, scrr, Day, Month, Year)  
+    
+    """
     day_delta = datetime.timedelta(days=1) #set t step to 1 day
     start_date = datetime.date(2021, 10, 15) # hardcode start date
     end_date = datetime.date(2022, 3, 15) #hardcode end date
@@ -27,6 +34,7 @@ def main(): #main function for direct usage
         Year = (start_date + i*day_delta).year
         mins, wall, scrl, scrr = calcShade(Day, Month, Year)
         makeGraph(mins, wall, scrl, scrr, Day, Month, Year)
+    """
 
 def getInputs():#get date info from user for single use cases
     Year = 2021 #int(input("Year: "))
@@ -89,8 +97,8 @@ def makeGraph(mins, wall, scrl, scrr, Day, Month, Year):
     plt.plot(mins, scrr, color='blue') #plot shade by cover top line
     plt.fill_between(mins, wall, color='green', alpha = .2) #fill green area
     plt.fill_between(mins, scrr, scrl, color='blue', alpha = .2) #fill blue area
-    plt.savefig("10-15_3-15_Shade/" +str(Month)+"-"+str(Day)+"-"+ str(Year) + "_Shade.png", format = 'png', bbox_inches = 'tight') #save image as png
+    #plt.savefig("10-15_3-15_Shade/" +str(Month)+"-"+str(Day)+"-"+ str(Year) + "_Shade.png", format = 'png', bbox_inches = 'tight') #save image as png
 
-    #plt.show()
+    plt.show()
 
 main() #call main

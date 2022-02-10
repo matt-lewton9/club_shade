@@ -6,11 +6,11 @@ import math
 import matplotlib.image as mpimg
 
 #INIT constants and globals
-HEIGHT = 30 #height of cover above ice
-BOTTOM = 75 #Bottom edge of cover, distance in ft from North edge of rink
-C_WIDTH = 50 #width of cover (N-S)
-R_WIDTH = 80 #width of rink (E-W)
-R_LENGTH = 200 #length of rink
+HEIGHT = 15 #height of cover above ice (ft)
+BOTTOM = 75 #Bottom edge of cover, distance from North edge of rink (ft)
+C_WIDTH = 125 #width of cover (N-S) (ft)
+R_WIDTH = 80 #width of rink (E-W) (ft)
+R_LENGTH = 200 #length of rink (ft)
 LATITUDE = 38.974173 #Rink latitude
 LONGITUDE = -77.078337 #Rink longitude
 TILT = 3.8 #degrees, tilt of rink from N-S
@@ -18,13 +18,13 @@ TILT = 3.8 #degrees, tilt of rink from N-S
 #main function for direct usage
 def main():
     
-    """
+    
     # Single day use
     Day, Month, Year = getInputs()
     shade = simShade(Day, Month, Year) #sim shade
     graphData(shade, Day, Month, Year) #make graph
+    
     """
-
     #For Hardcoded date range
     # The size of each step in days
     day_delta = datetime.timedelta(days=1) #set t step to one day
@@ -36,7 +36,7 @@ def main():
         Year = (start_date + i*day_delta).year
         shade = simShade(Day, Month, Year) #sim shade
         graphData(shade, Day, Month, Year) #make graph
-    
+    """
 
 def getInputs(): #get date from user
     #get date info
@@ -96,8 +96,8 @@ def graphData(shade, Day, Month, Year):
     plt.ylabel('Baseline 0 ft at trees, Winter Center at 200 ft') #y axis label
     plt.xlabel("North Side/Trees") #x axis label
     
-    plt.savefig("10-15_3-15_Heatmaps/" +str(Month)+"-"+str(Day)+"-"+ str(Year) + "_heatmap.png", format = 'png', bbox_inches = 'tight') #save image as png
+    #plt.savefig("10-15_3-15_Heatmaps/" +str(Month)+"-"+str(Day)+"-"+ str(Year) + "_heatmap.png", format = 'png', bbox_inches = 'tight') #save image as png
 
-    #plt.show() #show image
+    plt.show() #show image
 
 main()
